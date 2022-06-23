@@ -1,13 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-class HomeScreen extends React.Component {
+class PlusScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={[{ fontSize : 20, color : 212121}]}>
-                    홈
-                </Text>
+                <Text>Plus</Text>
             </View>
         );
     }
@@ -21,4 +19,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;
+export default PlusScreen;
