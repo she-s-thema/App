@@ -5,7 +5,7 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={[{ fontSize : 20, color : 212121}]}>
+                <Text style={[{ fontSize : 20, color : "gray"}]}>
                     홈
                 </Text>
             </View>
@@ -16,7 +16,8 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        justifyContent : 'center',
+        marginTop : 50,
+        justifyContent : 'top',
         alignItems : 'center',
     },
 });

@@ -5,7 +5,9 @@ class SettingScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Setting</Text>
+                <Text style={[{ fontSize : 20, color : "gray"}]}>
+                    마이 페이지
+                </Text>
             </View>
         );
     }
@@ -14,7 +16,8 @@ class SettingScreen extends React.Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        justifyContent : 'center',
+        marginTop : 50,
+        justifyContent : 'top',
         alignItems : 'center',
     },
 });

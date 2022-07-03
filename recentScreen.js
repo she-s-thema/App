@@ -1,14 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-class HeartScreen extends React.Component {
+class recentScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
                 <Text style={[{ fontSize : 20, color : "gray"}]}>
-                    찜한 상품
+                    최근 본 상품
                 </Text>
             </View>
+
         );
     }
 }
@@ -22,4 +23,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HeartScreen;
+export default recentScreen;

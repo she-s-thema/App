@@ -1,5 +1,6 @@
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {Image} from 'react-native';
 import HomeScreen from "./HomeScreen";
 import ChatScreen from "./ChatScreen";
 import SettingScreen from "./SettingScreen";
@@ -8,6 +9,8 @@ import HeartScreen from "./HeartScreen";
 
 const TabNavigator = createBottomTabNavigator ({
   Home : {
+    tabBarIcon : ([color, size]) => {
+    },
     screen : HomeScreen,
   },
   Chat : {
@@ -21,8 +24,8 @@ const TabNavigator = createBottomTabNavigator ({
   },
   Heart : {
     screen : HeartScreen,
-  },
 
+  },
 });
 
 export default createAppContainer(TabNavigator);
