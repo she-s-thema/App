@@ -2,18 +2,17 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Image} from 'react-native';
 import Pro from './img/pro.png';
+import { SafeAreaView, TextInput, onChangeText} from "react-native";
 
 class SettingScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text1}>마이 페이지</Text>
-                <View style={styles.profile}>
-                    <Image source={Pro} />
-                </View>
-                <Text style={styles.text2}>아이디</Text>
+                <Text style={[{ fontSize : 20, color : "gray"}]}>
+                    마이 페이지
+                </Text>
+                <View style={styles.line} />
             </View>
-
         );
     }
 }
@@ -21,30 +20,16 @@ class SettingScreen extends React.Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
+        marginTop : 50,
         justifyContent : 'top',
+        alignItems : 'center',
     },
 
-    text1 : {
-      fontSize : 20,
-      color : "gray",
-      marginTop : 50,
-      alignItems : 'center',
-      marginLeft : 150,
-    },
-
-    text2 : {
-        fontSize : 19,
-        color : "black",
-        marginTop : 25,
-        marginLeft : 60,
-
-    },
-
-    profile : {
-        height : 35,
-        width : 35,
-        marginTop : 95,
-        marginLeft : 60,
+    line : {
+        width : 344,
+        marginTop : 18,
+        borderBottomWidth : 1,
+        borderColor : 'gray',
     },
 });
 

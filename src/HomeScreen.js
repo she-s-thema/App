@@ -1,13 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, TextInput, View} from 'react-native';
 
 class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={[{ fontSize : 20, color : "gray"}]}>
-                    홈
-                </Text>
+                <TextInput
+                    style={styles.search}
+                    placeholder="검색하시려면 클릭해주세요." />
             </View>
         );
     }
@@ -20,6 +20,16 @@ const styles = StyleSheet.create({
         justifyContent : 'top',
         alignItems : 'center',
     },
+
+    search : {
+        width : 320,
+        height : 38,
+        backgroundColor : '#F5F5F5',
+        borderRadius : 5,
+        color : 'gray',
+    }
+
+
 });
 
 export default HomeScreen;
