@@ -23,10 +23,11 @@ const styles = StyleSheet.create({
 
     search : {
         width : 320,
-        height : 38,
+        height : 43,
         backgroundColor : '#F5F5F5',
         borderRadius : 5,
         color : 'gray',
+        padding : 15,
     }
 
 
