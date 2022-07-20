@@ -34,4 +34,5 @@ const styles = StyleSheet.create({
 
 })
 
-export default loadingScreen
+export default loadingScreen;
+

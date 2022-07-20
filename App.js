@@ -31,7 +31,7 @@ const TabNavigator = createBottomTabNavigator(
                 } else if (routeName === '채팅') {
                     iconName = 'chatbubble-outline';
                 } else if (routeName === '글 작성') {
-                    iconName = 'plus-circle';
+                    iconName = '';
                 } else if (routeName === '내 소개') {
                     iconName = 'person-outline';
                 }

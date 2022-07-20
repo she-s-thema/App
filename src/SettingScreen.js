@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Image} from 'react-native';
-import Pro from './img/pro.png';
-import { SafeAreaView, TextInput, onChangeText} from "react-native";
+import { TextInput } from "react-native";
 
 class SettingScreen extends React.Component {
     render() {
@@ -22,9 +21,30 @@ class SettingScreen extends React.Component {
                 </View>
                 <View style={styles.buttons} />
                 <Text style={styles.recent}>최근 본 상품</Text>
-                <Image
-                    source = {require('./img/cute.png')}
-                    style={styles.postone} />
+                <View>
+                    <Image
+                        source = {require('./img/cute.png')}
+                        style={styles.postone} />
+                    <Image
+                        source = {require('./img/cute.png')}
+                        style={styles.posttwo} />
+                    <Image
+                        source = {require('./img/cute.png')}
+                        style={styles.postthree} />
+                    <Image
+                        source = {require('./img/cute.png')}
+                        style={styles.postfour} />
+                </View>
+                <View>
+                    <Image
+                        source = {require('./img/marker.png')}
+                        style={styles.marker} />
+                    <Text style={styles.location}>위치 다시 설정하기</Text>
+                    <Image
+                        source = {require('./img/opinion.png')}
+                        style={styles.opinion} />
+                    <Text style={styles.send}>의견 보내기</Text>
+                </View>
             </View>
         );
     }
@@ -97,7 +117,61 @@ const styles = StyleSheet.create({
         height : 89,
         marginTop : 15,
         marginLeft : 50,
+        flexDirection : 'row',
+        position : 'absolute',
+    },
+
+    posttwo : {
+        width : 74,
+        height : 89,
+        marginTop : 15,
+        marginLeft : 132,
+        flexDirection: 'row',
+    },
+
+    postthree : {
+        width : 74,
+        height : 89,
+        marginTop : 15,
+        marginLeft : 214,
+        flexDirection : 'row',
+        position : 'absolute',
+    },
+
+    postfour : {
+        width : 74,
+        height : 89,
+        marginTop : 15,
+        marginLeft : 296,
+        flexDirection : 'row',
+        position : 'absolute',
+    },
+
+    marker : {
+        marginLeft : 50,
+        marginTop : 36,
+        position : 'relative',
+    },
+
+    location : {
+        fontSize : 12,
+        position : 'absolute',
+        marginTop : 42,
+        marginLeft : 90,
+    },
+
+    opinion : {
+        marginLeft : 52,
+        marginTop : 10,
+    },
+
+    send : {
+        fontSize : 12,
+        position : 'absolute',
+        marginTop : 80,
+        marginLeft : 90,
     }
 });
 
 export default SettingScreen;
+
