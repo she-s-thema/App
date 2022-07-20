@@ -8,6 +8,8 @@ class HomeScreen extends React.Component {
                 <TextInput
                     style={styles.search}
                     placeholder="검색하시려면 클릭해주세요." />
+                    <Text>최근</Text>
+                    
             </View>
         );
     }
@@ -23,10 +25,11 @@ const styles = StyleSheet.create({
 
     search : {
         width : 320,
-        height : 38,
+        height : 43,
         backgroundColor : '#F5F5F5',
         borderRadius : 5,
         color : 'gray',
+        padding : 15,
     }
 
 

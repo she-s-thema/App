@@ -1,11 +1,11 @@
 import React from 'react'
-import {StyleSheet, SafeAreaView, Image, Text,  TouchableOpacity} from 'react-native';
+import {StyleSheet, SafeAreaView, Image, Text, TouchableOpacity, View} from 'react-native';
 
 class loadingScreen extends React.Component{
     render(){
         return(
             <SafeAreaView style = {styles.container}>
-                <Image 
+                <Image
                     style = {styles.logo}
                     source = {require('./img/Logo.png')} />
                 <Text style = {styles.text}>선사시대로 돌아가는 중...</Text>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignItems : 'center',
     },
-    
+
     logo : {
         width : 129.74,
         height : 104.72,
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default loadingScreen;
+export default loadingScreen
