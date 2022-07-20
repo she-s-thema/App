@@ -1,12 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import {StyleSheet, Picker, TextInput, View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
 import { block } from 'react-native-reanimated';
 
 
+=======
+import {StyleSheet, TextInput, View, Text} from 'react-native';
+>>>>>>> 1d33b4b5a55bd407a1ead8c0f92684257ea672be
 
 class HomeScreen extends React.Component {
     render() {
         return (
+<<<<<<< HEAD
             <ScrollView>
                 <View style={styles.container}>
                     <TextInput
@@ -82,6 +87,15 @@ class HomeScreen extends React.Component {
                         </View>
                 </View>
             </ScrollView>
+=======
+            <View style={styles.container}>
+                <TextInput
+                    style={styles.search}
+                    placeholder="검색하시려면 클릭해주세요." />
+                    <Text>최근</Text>
+
+            </View>
+>>>>>>> 1d33b4b5a55bd407a1ead8c0f92684257ea672be
         );
     }
 }
