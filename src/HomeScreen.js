@@ -29,7 +29,8 @@ class HomeScreen extends React.Component {
                                     }}>
                                     <Image 
                                         style = {styles.profile}
-                                        source= {require('./img/profile.png')} />
+                                        source= {require('./img/profile.png')} 
+                                        onPress = {() => navigation.naviate('detailScreen')} />
                                     <Text style = {styles.name}>yyu._.e</Text>
                                     <Image style={styles.image}
                                         source={require('./img/clothes.png')}/>
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
 
     explain : {
         marginLeft : 8,
+        fontWeight: "bold"
     },
 
 
