@@ -1,10 +1,16 @@
 import React from 'react';
-import {createAppContainer} from 'react-navigation';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './src/HomeScreen';
 import ChatScreen from './src/ChatScreen';
-import SettingScreen from './src/SettingScreen';
+import SettingScreen from './src/screen/SettingScreen';
+import LocationScreen from './src/screen/locationScreen';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import "react-native-gesture-handler";
+
+const Stack = createStackNavigator();
 
 const TabNavigator = createBottomTabNavigator(
     {
@@ -36,15 +42,34 @@ const TabNavigator = createBottomTabNavigator(
                     iconName = 'person-outline';
                 }
                 return (
-                    <Ionicons
-                        name={iconName}
-                        size={horizontal ? 20 : 25}
-                        color={'balck'}
-                    />
+                    <div>
+                        <Ionicons
+                            name={iconName}
+                            size={horizontal ? 20 : 25}
+                            color={'black'}
+                        />
+
+                        <routeName
+                            name={routeName}
+                            color={'black'}
+                        />
+                    </div>
                 );
             },
         }),
     },
-
 );
+
+function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="SettingScreen">
+                <Stack.Screen name="LocationScreen" component={LocationScreen} />
+                <Stack.Screen name="SettingScreen" component={SettingScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+
 export default createAppContainer(TabNavigator);

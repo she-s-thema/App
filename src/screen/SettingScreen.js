@@ -2,13 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Image} from 'react-native';
 import { TextInput } from "react-native";
+import {NavigationActions as navigation} from "react-navigation";
 
-class SettingScreen extends React.Component {
-    render() {
+function SettingScreen({navigation}) {
         return (
             <View style={styles.container}>
                 <Image
-                    source = {require('./img/profile.png')}
+                    source = {require('../img/profile.png')}
                     style={styles.img} />
                 <Text style={styles.name}>k99._.e</Text>
                 <View>
@@ -16,38 +16,40 @@ class SettingScreen extends React.Component {
                         placeholder="상태 메세지를 입력해"
                         style = {styles.memo} />
                     <Image
-                        source = {require('./img/Vector.png')}
+                        source = {require('../img/Vector.png')}
                         style={styles.use} />
                 </View>
                 <View style={styles.buttons} />
                 <Text style={styles.recent}>최근 본 상품</Text>
                 <View>
                     <Image
-                        source = {require('./img/cute.png')}
+                        source = {require('../img/cute.png')}
                         style={styles.postone} />
                     <Image
-                        source = {require('./img/cute.png')}
+                        source = {require('../img/cute.png')}
                         style={styles.posttwo} />
                     <Image
-                        source = {require('./img/cute.png')}
+                        source = {require('../img/cute.png')}
                         style={styles.postthree} />
                     <Image
-                        source = {require('./img/cute.png')}
+                        source = {require('../img/cute.png')}
                         style={styles.postfour} />
                 </View>
                 <View>
                     <Image
-                        source = {require('./img/marker.png')}
-                        style={styles.marker} />
-                    <Text style={styles.location}>위치 다시 설정하기</Text>
+                        source = {require('../img/marker.png')}
+                        style={styles.marker}
+                    />
+                    <Text style={styles.location}
+                          onPress={() => navigation.navigate('LocationScreen')}
+                    >위치 다시 설정하기</Text>
                     <Image
-                        source = {require('./img/opinion.png')}
+                        source = {require('../img/opinion.png')}
                         style={styles.opinion} />
                     <Text style={styles.send}>의견 보내기</Text>
                 </View>
             </View>
         );
-    }
 }
 
 const styles = StyleSheet.create({
@@ -174,4 +176,3 @@ const styles = StyleSheet.create({
 });
 
 export default SettingScreen;
-

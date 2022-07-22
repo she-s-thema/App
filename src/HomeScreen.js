@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Picker, TextInput, View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
+import {StyleSheet, Picker, TextInput, View, Text, TouchableOpacity, Image, ScrollView, componentDidMount} from 'react-native';
 import { block } from 'react-native-reanimated';
 
 
@@ -21,67 +21,75 @@ class HomeScreen extends React.Component {
                             <Picker.Item label = "부암동" value = "부암동" />
                             <Picker.Item label = "가락동" value = "가락동" />
                         </Picker>
-
+        
                         <View style={styles.view}>
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => {
-                                    }}>
-                                    <Image 
-                                        style = {styles.profile}
-                                        source= {require('./img/profile.png')} 
-                                        onPress = {() => navigation.naviate('detailScreen')} />
+                                <Image 
+                                    style = {styles.profile}
+                                    source= {require('./img/profile.png')}  />
                                     <Text style = {styles.name}>yyu._.e</Text>
-                                    <Image style={styles.image}
-                                        source={require('./img/clothes.png')}/>
-                                        <Text style = {styles.explain}>2000원</Text>
-                                        <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                            </TouchableOpacity>
 
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => {
-                                    }}>
-                                    <Image 
-                                        style = {styles.profile}
-                                        source= {require('./img/profile.png')} />
+                                <TouchableOpacity
+                                    style={styles.button}
+                                    onPress={() => {
+                                        }}>
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                </TouchableOpacity>
+
+                                <Text style = {styles.explain}>2000원</Text>
+                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                      
+                                <Image 
+                                    style = {styles.profile}
+                                    source= {require('./img/profile.png')}  />
                                     <Text style = {styles.name}>yyu._.e</Text>
-                                    <Image style={styles.image}
-                                        source={require('./img/clothes.png')}/>
-                                        <Text style = {styles.explain}>2000원</Text>
-                                        <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                            </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.button}
+                                    onPress={() => {
+                                        }}>
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                </TouchableOpacity>
+
+                                <Text style = {styles.explain}>2000원</Text>
+                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
                         </View>
 
                         <View style={styles.view}>
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => {
-                                    }}>
-                                    <Image 
-                                        style = {styles.profile}
-                                        source= {require('./img/profile.png')} />
+                                <Image 
+                                    style = {styles.profile}
+                                    source= {require('./img/profile.png')}  />
                                     <Text style = {styles.name}>yyu._.e</Text>
-                                    <Image style={styles.image}
-                                        source={require('./img/clothes.png')}/>
-                                        <Text style = {styles.explain}>2000원</Text>
-                                        <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                            </TouchableOpacity>
 
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => {
-                                    }}>
-                                    <Image 
-                                        style = {styles.profile}
-                                        source= {require('./img/profile.png')} />
+                                <TouchableOpacity
+                                    style={styles.button}
+                                    onPress={() => {
+                                        }}>
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                </TouchableOpacity>
+
+                                <Text style = {styles.explain}>2000원</Text>
+                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                      
+                                <Image 
+                                    style = {styles.profile}
+                                    source= {require('./img/profile.png')}  />
                                     <Text style = {styles.name}>yyu._.e</Text>
-                                    <Image style={styles.image}
-                                        source={require('./img/clothes.png')}/>
-                                        <Text style = {styles.explain}>2000원</Text>
-                                        <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                            </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.button}
+                                    onPress={() => {
+                                        }}>
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                </TouchableOpacity>
+
+                                <Text style = {styles.explain}>2000원</Text>
+                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
                         </View>
+                               
                 </View>
             </ScrollView>
         );
@@ -112,10 +120,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+
     button : { 
         flex : 1,
         justifyContent: 'center', 
         marginTop : 15,
+        display : 'inline-block',
+    },
+
+    profile : {
+        width : 30,
+        height : 30,
     },
 
     image : {
@@ -137,7 +152,7 @@ const styles = StyleSheet.create({
 
     explain : {
         marginLeft : 8,
-        fontWeight: "bold"
+        fontWeight: "bold",
     },
 
 
