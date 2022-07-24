@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Picker, TextInput, View, Text, TouchableOpacity, Image, ScrollView, componentDidMount} from 'react-native';
+import {StyleSheet, Picker, TextInput, View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
 import { block } from 'react-native-reanimated';
 
 
@@ -23,29 +23,84 @@ class HomeScreen extends React.Component {
                         </Picker>
         
                         <View style={styles.view}>
-                                <Image 
-                                    style = {styles.profile}
-                                    source= {require('./img/profile.png')}  />
-                                    <Text style = {styles.name}>yyu._.e</Text>
-
                                 <TouchableOpacity
-                                    style={styles.button}
                                     onPress={() => {
                                         }}>
+                                        <View style = {styles.userInfo}>
+                                            <Image 
+                                                style = {styles.profile}
+                                                source= {require('./img/profile.png')}  />
+                                            <Text disable = {true} style = {styles.name}>yyu._.e</Text>
+                                        </View>
+
                                         <Image style={styles.image}
                                             source={require('./img/clothes.png')}/>
+                                        <Text style = {styles.explain}>2000원</Text>
+                                        <Text  style = {styles.explain}>검정 싱글 크롭 자켓</Text>
                                 </TouchableOpacity>
 
-                                <Text style = {styles.explain}>2000원</Text>
-                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        }}>
+                                        <View style = {styles.userInfo}>
+                                            <Image 
+                                                style = {styles.profile}
+                                                source= {require('./img/profile.png')}  />
+                                            <Text disable = {true} style = {styles.name}>yyu._.e</Text>
+                                        </View>
+
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                        <Text style = {styles.explain}>2000원</Text>
+                                        <Text  style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                                </TouchableOpacity>
+
+                            </View>
+
+                            <View style={styles.view}>
+                            <TouchableOpacity
+                                    onPress={() => {
+                                        }}>
+                                        <View style = {styles.userInfo}>
+                                            <Image 
+                                                style = {styles.profile}
+                                                source= {require('./img/profile.png')}  />
+                                            <Text disable = {true} style = {styles.name}>yyu._.e</Text>
+                                        </View>
+
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                        <Text style = {styles.explain}>2000원</Text>
+                                        <Text  style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        }}>
+                                        <View style = {styles.userInfo}>
+                                            <Image 
+                                                style = {styles.profile}
+                                                source= {require('./img/profile.png')}  />
+                                            <Text disable = {true} style = {styles.name}>yyu._.e</Text>
+                                        </View>
+
+                                        <Image style={styles.image}
+                                            source={require('./img/clothes.png')}/>
+                                        <Text style = {styles.explain}>2000원</Text>
+                                        <Text  style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                                </TouchableOpacity>
+
+                            </View>
+
+                                
                       
-                                <Image 
+                                {/* <Image 
                                     style = {styles.profile}
                                     source= {require('./img/profile.png')}  />
-                                    <Text style = {styles.name}>yyu._.e</Text>
+                                    <Text 
+                                        style = {styles.name}>yyu._.e</Text>
 
                                 <TouchableOpacity
-                                    style={styles.button}
                                     onPress={() => {
                                         }}>
                                         <Image style={styles.image}
@@ -53,44 +108,8 @@ class HomeScreen extends React.Component {
                                 </TouchableOpacity>
 
                                 <Text style = {styles.explain}>2000원</Text>
-                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
+                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text> */}                    
                         </View>
-
-                        <View style={styles.view}>
-                                <Image 
-                                    style = {styles.profile}
-                                    source= {require('./img/profile.png')}  />
-                                    <Text style = {styles.name}>yyu._.e</Text>
-
-                                <TouchableOpacity
-                                    style={styles.button}
-                                    onPress={() => {
-                                        }}>
-                                        <Image style={styles.image}
-                                            source={require('./img/clothes.png')}/>
-                                </TouchableOpacity>
-
-                                <Text style = {styles.explain}>2000원</Text>
-                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                      
-                                <Image 
-                                    style = {styles.profile}
-                                    source= {require('./img/profile.png')}  />
-                                    <Text style = {styles.name}>yyu._.e</Text>
-
-                                <TouchableOpacity
-                                    style={styles.button}
-                                    onPress={() => {
-                                        }}>
-                                        <Image style={styles.image}
-                                            source={require('./img/clothes.png')}/>
-                                </TouchableOpacity>
-
-                                <Text style = {styles.explain}>2000원</Text>
-                                <Text style = {styles.explain}>검정 싱글 크롭 자켓</Text>
-                        </View>
-                               
-                </View>
             </ScrollView>
         );
     }
@@ -100,7 +119,7 @@ const styles = StyleSheet.create({
     container : {
         flex : 1,
         marginTop : 50,
-        justifyContent : 'top',
+        justifyContent : 'center',
         alignItems : 'center',
     },
 
@@ -114,30 +133,33 @@ const styles = StyleSheet.create({
     },
 
     view : {
-        flex: 1, 
-        flexDirection: 'row',
-        justifyContent: 'center', 
-        alignItems: 'center',
-    },
-
-
-    button : { 
         flex : 1,
-        justifyContent: 'center', 
-        marginTop : 15,
-        display : 'inline-block',
+        flexDirection : 'row',
+        flexWrap : 'wrap',
+        justifyContent : 'space-evenly',
+        alignItems : 'center',
     },
 
+    picker : {
+        width : 500,
+        height : 100
+    },
     profile : {
+        flex : 1,
+        flexDirection : 'row',
+        flexWrap : 'wrap',
+        marginTop : 10,
         width : 30,
         height : 30,
+
     },
 
     image : {
         width : 150,
         height : 200,
         margin : 10,
-        position : 'relative',
+        justifyContent : 'center',
+        alignItems : 'center',
     },
 
     picker : {
@@ -154,9 +176,6 @@ const styles = StyleSheet.create({
         marginLeft : 8,
         fontWeight: "bold",
     },
-
-
-
 
 });
 
