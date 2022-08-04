@@ -9,6 +9,11 @@ class otherPostScreen extends React.Component{
                 <View style = {styles.userInfo}>
                     <Image  style = {styles.profile} source = {require('./img/pro.png')} />
                     <Text style = {styles.name}>k99._.e</Text>
+                    <Picker 
+                        style = {styles.picker}>
+                        <Picker.Item label = "거래중" value = "거래중" />
+                        <Picker.Item label = "거래가능" value = "거래가능" />
+                    </Picker>
                 </View>
 
 
@@ -97,4 +102,13 @@ const styles = StyleSheet.create({
         marginLeft : 10,
         fontSize : 25,
     },
+
+    picker : {
+        position : 'absolute',
+        top : 80,
+        right : 20,
+        fontSize : 20,
+    }
+
+
 })

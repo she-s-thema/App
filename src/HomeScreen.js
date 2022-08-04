@@ -10,14 +10,16 @@ class HomeScreen extends React.Component {
                     <TextInput
                         style={styles.search}
                         placeholder="검색하시려면 클릭해주세요." />
-                        <Text style = {styles.text}>최근</Text>
-                        <Picker 
-                            style = {styles.picker}>
-                            <Picker.Item label = "신성동 1가" value = "신성동 1가" />
-                            <Picker.Item label = "전포동" value = "전포동" />
-                            <Picker.Item label = "부암동" value = "부암동" />
-                            <Picker.Item label = "가락동" value = "가락동" />
-                        </Picker>
+                        <View style = {styles.select}>
+                            <Text style = {styles.text}>최근</Text>
+                            <Picker 
+                                style = {styles.picker}>
+                                <Picker.Item label = "신성동 1가" value = "신성동 1가" />
+                                <Picker.Item label = "전포동" value = "전포동" />
+                                <Picker.Item label = "부암동" value = "부암동" />
+                                <Picker.Item label = "가락동" value = "가락동" />
+                            </Picker>
+                        </View>
         
                         <View style={styles.view}>
                                 <TouchableOpacity
@@ -169,8 +171,26 @@ const styles = StyleSheet.create({
         alignItems : 'center',
     },
 
-    picker : {
+    select : {
+        marginTop : 15,
+        flexDirection : 'row',
+        flexWrap : 'wrap',
+        alignItems : 'center',
+        left : -70,
+        marginBottom : 15,
+    },
+
+    text : {
         marginTop : 10,
+        fontSize : 25,
+        display : 'inline-block'
+    },
+
+    picker : {
+        fontSize : 20,
+        display : 'inline-block',
+        marginTop : 10,
+        marginLeft : 10,
     },
 
     post : {
@@ -218,12 +238,6 @@ const styles = StyleSheet.create({
         right : 15,
         color : '#FFFFFF',
         fontWeight : 'bold'
-    },
-
-    text : {
-        marginTop : 10,
-        fontSize : 25,
-
     },
 
     explain : {

@@ -1,16 +1,18 @@
 import React from 'react'
 import {View, Text, Image, StyleSheet, ScrollView, TouchableOpacity} from 'react-native'
-
+import ImageSlider from "./imageSlider"
 class detailScreen extends React.Component{
     render() {
         return(
             <ScrollView>
+                    <TouchableOpacity 
+                        style = {styles.borrow}
+                        onPress = {this.onPress}>
+                            <Text style ={styles.borroBtn}>대여</Text>
+                            </TouchableOpacity>
                 <View style = {styles.container}>
-                    <Image 
-                        source = {require('./img/clothes.png')} 
-                        style = {styles.img} />
-
                         <View style = {styles.view}>
+                            <ImageSlider />
                             <View style = {styles.userInfo}>
                                 <Image
                                     source = {require('./img/pro.png')} 
@@ -30,6 +32,17 @@ class detailScreen extends React.Component{
                                 <Text style = {styles.states}>구겨짐 X</Text>
                             </View>
                         </View>
+                        <View style = {styles.conversation}> 
+                            <View style = {styles.show}>
+                                <Image style = {styles.heart} source = {require('./img/heart.png')}/>
+                                <Text style = {styles.count}>20</Text>
+                            </View>
+                                <TouchableOpacity style = {styles.btn}>
+                                    <Text style = {styles.converBtn}>
+                                    대화하기
+                                    </Text>
+                                </TouchableOpacity>
+                        </View>
                 </View>
             </ScrollView>
         )
@@ -45,14 +58,18 @@ const styles = StyleSheet.create ({
         alignItems : 'left',
     },
 
-    view : {
-        marginLeft : 10,
+    borrow : {
+        position : 'absolute',
+        right : 20,
+        top :50
     },
 
-    img : {
-        width : 380,
-        height : 380,
-        marginTop : 100,
+    borroBtn : {
+        color : '#646FD4',
+    },
+
+    view : {
+        marginLeft : 10,
     },
 
     userInfo : {
@@ -109,6 +126,51 @@ const styles = StyleSheet.create ({
         marginLeft : 10,
         display : 'inline-block',
     },
+
+    conversation : {
+        width : 380,
+        height : 60,
+        borderWidth: 1,
+        borderTopRightRadius : 14,
+        flexDirection : 'row',
+        flexWrap : 'wrap',
+        alignItems : 'center',
+    },
+
+    show : {
+        display : 'inline-block',
+        left :35,
+        top : -5,
+    },
+
+    btn : {
+        display : 'inline-block',
+        right : 30,
+        borderWidth : 1,
+        borderRadius : 20,
+        width : 250,
+        height : 37,
+        position : 'absolute',
+        backgroundColor :  '#7886FF',
+        color : '#FFFFFF',
+        textAlign : 'center',
+        padding : 5,
+    },
+
+    converBtn : {
+        color : '#FFFFFF',
+        fontSize : 18,
+        top : 5,
+       },
+
+    heart : {
+        width : 20,
+        height : 20,
+    },
+
+    count : {
+        position : 'absolute',
+    }
 
 })
 
