@@ -8,8 +8,10 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import {TimeExample} from './src/TimeExample';
 import "react-native-gesture-handler";
-
+import PlaceScreen from './src/PlaceScreen';
+import TimeScreen from './src/TimeScreen';
 const Stack = createStackNavigator();
 
 const TabNavigator = createBottomTabNavigator(
@@ -21,10 +23,10 @@ const TabNavigator = createBottomTabNavigator(
             screen: ChatScreen,
         },
         '글 작성': {
-            screen: ChatScreen,
+            screen: TimeScreen,
         },
         '내 소개': {
-            screen: SettingScreen,
+            screen: PlaceScreen,
         },
     },
     {
