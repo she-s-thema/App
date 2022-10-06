@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   Picker,
@@ -8,18 +8,18 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-} from "react-native";
+} from 'react-native';
 
 const styles = StyleSheet.create({
-  check : {
-    width : 390,
-    height : 820,
-  }
+  check: {
+    width: 390,
+    height: 820,
+  },
 });
 
 const Home = () => {
   return (
-    <Image style = {styles.check} source = {require('../img/main.png')}></Image>
+    <Image style={styles.check} source={require('../img/main.png')}></Image>
   );
 };
 

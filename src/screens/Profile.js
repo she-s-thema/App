@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import styled, {ThemeContext} from 'styled-components/native';
 import {Button, Image, Input} from '../components';
-import {UserContext, ProgressContext } from '../contexts';
+import {UserContext, ProgressContext} from '../contexts';
 import {Alert} from 'react-native';
 import {getCurrentUser, updateUserInfo, signout} from '../utils/firebase';
 

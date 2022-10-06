@@ -23,16 +23,16 @@ const ErrorText = styled.Text`
 `;
 
 const ChannelCreation = ({navigation}) => {
-  const {spinner  = useContext(ProgressContext),
+  const spinner = useContext(ProgressContext)
 
-  const[title, setTitle] = useState(''),
-  const[description, setDescription] = useState(''),
-  const descriptionRef = useRef(),
-  const[errorMessage, setErrorMessage] = useState(''),
-  const[disabled, setDisabled] = useState(true),
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const descriptionRef = useRef()
+  const [errorMessage, setErrorMessage] = useState('')
+  const [disabled, setDisabled] = useState(true)
 
-  useEffect(() => {
-    setDisabled(!(title && !errorMessage));
+  useEffect (() => {
+    setDisabled(!(title && !errorMessage))
   }, [title, description, errorMessage]);
 
   const _handleTitleChange = title => {

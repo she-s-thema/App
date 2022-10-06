@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 
   edit: {
-    color: "gray",
+    color: 'gray',
     fontSize: 10,
     marginLeft: 130,
     marginTop: 125,
@@ -173,7 +173,10 @@ const Mypage = () => {
           <Text style={styles.gomaktext}>보유 꼬막</Text>
           <View style={styles.container}>
             <Text style={styles.have}>1,000,000</Text>
-            <Image style={styles.minigomak} source = {require('../img/mini_gomak.png')} />
+            <Image
+              style={styles.minigomak}
+              source={require('../img/mini_gomak.png')}
+            />
             <Image style={styles.next} source={require('../img/next.png')} />
           </View>
         </View>
@@ -186,14 +189,14 @@ const Mypage = () => {
         </View>
       </View>
       <View style={styles.container}>
-        <Image style={styles.heart} source={require('../img/he.png')}/>
+        <Image style={styles.heart} source={require('../img/he.png')} />
         <Text style={styles.hpost}>쨈한 게시물</Text>
-        <Image style={styles.nexttwo} source={require('../img/next.png')}/>
+        <Image style={styles.nexttwo} source={require('../img/next.png')} />
       </View>
       <View style={styles.container}>
-        <Image style={styles.picture} source={require('../img/one.png')}/>
-        <Image style={styles.picture} source={require('../img/two.png')}/>
-        <Image style={styles.picture} source={require('../img/three.png')}/>
+        <Image style={styles.picture} source={require('../img/one.png')} />
+        <Image style={styles.picture} source={require('../img/two.png')} />
+        <Image style={styles.picture} source={require('../img/three.png')} />
       </View>
       <View style={styles.container}>
         <Text style={styles.posttitle}>검정 싱글 크롭 자켓</Text>
@@ -206,14 +209,14 @@ const Mypage = () => {
         <Text style={styles.postcost}>10,500원</Text>
       </View>
       <View style={styles.container}>
-        <Image style={styles.mypost} source={require('../img/posttwo.png')}/>
+        <Image style={styles.mypost} source={require('../img/posttwo.png')} />
         <Text style={styles.hpost}>내 게시물</Text>
-        <Image style={styles.nexttwo} source={require('../img/next.png')}/>
+        <Image style={styles.nexttwo} source={require('../img/next.png')} />
       </View>
       <View style={styles.container}>
-        <Image style={styles.picture} source={require('../img/clothes.png')}/>
-        <Image style={styles.picture} source={require('../img/one.png')}/>
-        <Image style={styles.picture} source={require('../img/three.png')}/>
+        <Image style={styles.picture} source={require('../img/clothes.png')} />
+        <Image style={styles.picture} source={require('../img/one.png')} />
+        <Image style={styles.picture} source={require('../img/three.png')} />
       </View>
       <View style={styles.container}>
         <Text style={styles.posttitle}>검정 싱글 크롭 자켓</Text>
@@ -226,7 +229,7 @@ const Mypage = () => {
         <Text style={styles.postcost}>10,500원</Text>
       </View>
       <View style={styles.pic}>
-        <Image style={styles.please} source={require('../img/please.png')}/>
+        <Image style={styles.please} source={require('../img/please.png')} />
       </View>
     </View>
   );

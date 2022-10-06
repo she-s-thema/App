@@ -1,6 +1,6 @@
 const colors = {
-  white: '#ffffff',
   black: '#000000',
+  white: '#ffffff',
   grey_0: '#ffffff',
   grey_1: '#a6a6a6',
   red: '#e84118',
@@ -48,6 +48,3 @@ export const theme = {
   sendButtonActivate: colors.blue,
   sendButtonInactivate: colors.grey_1,
 };
-
-export class images {
-}
