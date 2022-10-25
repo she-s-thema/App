@@ -8,10 +8,13 @@ const styles = StyleSheet.create({
   }
 });
 
-const Post = () => {
+const Post = ({navigation}) => {
   return (
-    <Image style={styles.check} source = {require('../img/title.png')}></Image>
+    <Image
+      style={styles.check}
+      source={require('../img/title.png')}
+      onPress={() => navigation.navigate('Mypage')}></Image>
   );
-}
+};
 
 export default Post;

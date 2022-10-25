@@ -9,6 +9,7 @@ import Home from './Home';
 import Post from './Post';
 
 export {
+  Post,
   Login,
   Signup,
   Channel,
@@ -17,5 +18,4 @@ export {
   Profile,
   Mypage,
   Home,
-  Post,
 };
