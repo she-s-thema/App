@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Profile, ChannelList } from '../screens';
+import { Write, Home, Mypage, ChannelList } from '../screens';
 import { MaterialIcons } from '@expo/vector-icons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import { ThemeContext } from 'styled-components/native';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
@@ -26,7 +27,7 @@ const MainTab = ({ navigation, route }) => {
     navigation.setOptions({
       headerTitle: title,
       headerRight: () =>
-        title === 'Channels' && (
+        title === '채팅' && (
           <MaterialIcons
             name="add"
             size={26}
@@ -45,7 +46,18 @@ const MainTab = ({ navigation, route }) => {
       }}
     >
       <Tab.Screen
-        name="Channels"
+        name="홈"
+        component={Home}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            TabBarIcon({
+              focused,
+              name: focused ? 'chat-bubble' : 'chat-bubble-outline',
+            }),
+        }}
+      />
+      <Tab.Screen
+        name="채팅"
         component={ChannelList}
         options={{
           tabBarIcon: ({ focused }) =>
@@ -56,8 +68,19 @@ const MainTab = ({ navigation, route }) => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="글작성"
+        component={Write}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            TabBarIcon({
+              focused,
+              name: focused ? 'chat-bubble' : 'chat-bubble-outline',
+            }),
+        }}
+      />
+      <Tab.Screen
+        name="마이페이지"
+        component={Mypage}
         options={{
           tabBarIcon: ({ focused }) =>
             TabBarIcon({

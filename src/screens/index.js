@@ -4,5 +4,12 @@ import Channel from './Channel';
 import ChannelCreation from './ChannelCreation';
 import ChannelList from './ChannelList';
 import Profile from './Profile';
+import Mypage from './Mypage';
+import Home from './Home';
+import Detail from './Detail';
+import Write from './Write';
+import Writeheader from './Writeheader';
+import WritePrice from './WritePrice';
+import WriteEditor from './WriteEditor';
 
-export { Login, Signup, Channel, ChannelCreation, ChannelList, Profile };
+export { WriteEditor, Write, WritePrice, Writeheader, Detail, Home, Mypage, Login, Signup, Channel, ChannelCreation, ChannelList, Profile };
