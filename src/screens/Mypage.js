@@ -165,8 +165,8 @@ const Mypage = () => {
     <ScrollView>
       <View style={styles.background}>
         <View>
-          <Image style={styles.profile} source={require('./img/brown.png')} />
-          <Text style={styles.nickname}>k99._.e</Text>
+          <Image style={styles.profile} source={require('./img/ben.jpeg')} />
+          <Text style={styles.nickname}>황인준</Text>
           <Text style={styles.location}>부산광역시 강서구 가락동</Text>
           <Text style={styles.edit}>정보 수정</Text>
         </View>
@@ -174,7 +174,7 @@ const Mypage = () => {
           <View style={styles.gomak}>
             <Text style={styles.gomaktext}>보유 꼬막</Text>
             <View style={styles.container}>
-              <Text style={styles.have}>1,000,000</Text>
+              <Text style={styles.have}>13</Text>
               <Image
                 style={styles.minigomak}
                 source={require('./img/mini_gomak.png')}
@@ -185,14 +185,14 @@ const Mypage = () => {
           <View style={styles.deal}>
             <Text style={styles.dealtext}>거래 내역</Text>
             <View style={styles.container}>
-              <Text style={styles.count}>12</Text>
+              <Text style={styles.count}>2</Text>
               <Image style={styles.next} source={require('./img/next.png')} />
             </View>
           </View>
         </View>
         <View style={styles.container}>
           <Image style={styles.heart} source={require('./img/he.png')} />
-          <Text style={styles.hpost}>쨈한 게시물</Text>
+          <Text style={styles.hpost}>찜한 게시물</Text>
           <Image style={styles.nexttwo} source={require('./img/next.png')} />
         </View>
         <View style={styles.container}>

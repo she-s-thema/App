@@ -14,23 +14,22 @@ const Detail = () => {
       <View style={styles.background}>
         <View style={styles.container}>
           <Image
-            source={require('./img/brown.png')}
+            source={require('./img/ts.png')}
             style={styles.picture}
           />
           <View style={styles.view}>
             <View style={styles.userInfo}>
               <Image
-                source={require('./img/brown.png')}
+                source={require('./img/daeun.jpeg')}
                 style={styles.profile}
               />
-              <Text style={styles.name}>k99._.e</Text>
+              <Text style={styles.name}>김민지</Text>
             </View>
 
-            <Text style={styles.product_name}>브라운 후드 집업</Text>
+            <Text style={styles.product_name}>여름 흰 셔츠</Text>
             <Text style={styles.product_price}>2300원</Text>
             <Text style={styles.product_explain}>
-              한번 입어보고 컬러가 저랑 안 맞아서 안 입고 있어요. 꾸안꾸로
-              딱이에요.
+              너무 이쁜데 저랑 사이즈가 안 맞더라구요.. 옷은 진짜 이뻐요
             </Text>
 
             <View style={styles.product}>

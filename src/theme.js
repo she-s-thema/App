@@ -24,7 +24,7 @@ export const theme = {
   inputDisabledBackground: colors.grey_0,
 
   // Button Component
-  buttonBackground: colors.blue,
+  buttonBackground: '#7886FF',
   buttonTitle: colors.white,
   buttonUnfilledTitle: colors.blue,
   buttonLogout: colors.red,

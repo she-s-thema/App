@@ -57,14 +57,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor : 'white',
   },
 
   search: {
-    width: 320,
+    width: 340,
     height: 43,
     top: 15,
     marginBottom: 25,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#e3e3e3',
     borderRadius: 5,
     color: 'white',
     padding: 15,

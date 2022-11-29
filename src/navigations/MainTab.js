@@ -11,10 +11,10 @@ const Tab = createBottomTabNavigator();
 const TabBarIcon = ({ focused, name }) => {
   const theme = useContext(ThemeContext);
   return (
-    <MaterialIcons
+    <Ionicons
       name={name}
       size={26}
-      color={focused ? theme.tabActiveColor : theme.tabInactiveColor}
+      color= "black"
     />
   );
 };
@@ -41,8 +41,8 @@ const MainTab = ({ navigation, route }) => {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: theme.tabActiveColor,
-        inactiveTintColor: theme.tabInactiveColor,
+        activeTintColor: 'black',
+        inactiveTintColor: 'black',
       }}
     >
       <Tab.Screen
@@ -52,7 +52,7 @@ const MainTab = ({ navigation, route }) => {
           tabBarIcon: ({ focused }) =>
             TabBarIcon({
               focused,
-              name: focused ? 'chat-bubble' : 'chat-bubble-outline',
+              name: focused ? 'home' : 'home-outline',
             }),
         }}
       />
@@ -63,7 +63,7 @@ const MainTab = ({ navigation, route }) => {
           tabBarIcon: ({ focused }) =>
             TabBarIcon({
               focused,
-              name: focused ? 'chat-bubble' : 'chat-bubble-outline',
+              name: focused ? 'chatbox' : 'chatbox-outline',
             }),
         }}
       />
@@ -74,7 +74,7 @@ const MainTab = ({ navigation, route }) => {
           tabBarIcon: ({ focused }) =>
             TabBarIcon({
               focused,
-              name: focused ? 'chat-bubble' : 'chat-bubble-outline',
+              name: focused ? 'add-circle' : 'add-circle-outline',
             }),
         }}
       />

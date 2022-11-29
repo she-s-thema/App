@@ -46,7 +46,7 @@ const Login = ({ navigation }) => {
     const changedEmail = removeWhitespace(email);
     setEmail(changedEmail);
     setErrorMessage(
-      validateEmail(changedEmail) ? '' : 'Please verify your email.'
+      validateEmail(changedEmail) ? '' : '이메일을 확인해주세요'
     );
   };
   const _handlePasswordChange = password => {
@@ -58,7 +58,7 @@ const Login = ({ navigation }) => {
       const user = await signin({ email, password });
       dispatch(user);
     } catch (e) {
-      Alert.alert('Login Error', e.message);
+      Alert.alert('이메일 에러', e.message);
     } finally {
       spinner.stop();
     }
@@ -70,33 +70,32 @@ const Login = ({ navigation }) => {
       extraScrollHeight={20}
     >
       <Container insets={insets}>
-        <Image url={images.logo} imageStyle={{ borderRadius: 8 }} />
         <Input
-          label="Email"
+          label="이메일"
           value={email}
           onChangeText={_handleEmailChange}
           onSubmitEditing={() => passwordRef.current.focus()}
-          placeholder="Email"
+          placeholder="이메일"
           returnKeyType="next"
         />
         <Input
           ref={passwordRef}
-          label="Password"
+          label="비밀번호"
           value={password}
           onChangeText={_handlePasswordChange}
           onSubmitEditing={_handleLoginButtonPress}
-          placeholder="Password"
+          placeholder="비밀번호"
           returnKeyType="done"
           isPassword
         />
         <ErrorText>{errorMessage}</ErrorText>
         <Button
-          title="Login"
+          title="로그인"
           onPress={_handleLoginButtonPress}
           disabled={disabled}
         />
         <Button
-          title="Sign up with email"
+          title="이메일로 회원가입"
           onPress={() => navigation.navigate('Signup')}
           isFilled={false}
         />
